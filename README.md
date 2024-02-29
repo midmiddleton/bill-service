@@ -1,12 +1,17 @@
 ## instructions
 
-Create functionality that returns a JSON response to display the following information:
+The goal for this task is to create functionality utilising Larvel that returns a JSON response(s) to display data to be able to produce the following design:
 
 <img src="https://trilogy-care-public-hosted.s3.ap-southeast-2.amazonaws.com/other/design.png" alt="design">
 
-Run the migration and seeder to populate the database with dummy data: php artisan migrate --seed
+Run the migration and seeder to populate the database with dummy data: 
+```
+php artisan migrate --seed
+```
 
-You'll need to create or modify any relevant files in order to achieve the outcome. You can determine the best approach and best way to structure the JSON for a front end to consume. Bonus points for tests. 
+In order to achieve the outcome, you'll need to create or modify relevant files in this project. You can determine the best approach structure your code and the best way to structure the JSON for the front end / view to consume. Bonus points for tests. Super Bonus points for any front end work, but it's not expected.
+
+### How to submit:
 
 Create a PR or a zip of the files and email anthonyr@trilogycare.com.au
 
