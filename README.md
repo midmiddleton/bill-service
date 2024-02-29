@@ -13,7 +13,7 @@ In order to achieve the outcome, you'll need to create or modify relevant files 
 
 ### How to submit:
 
-Create a PR or a zip of the files and email anthonyr@trilogycare.com.au
+Create a PR or a zip of the files and email: anthonyr@trilogycare.com.au
 
 https://github.com/Trilogy-Care/code-challenge-01
 
