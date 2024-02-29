@@ -1,3 +1,21 @@
+## instructions
+
+Create functionality that returns a JSON response to display the following information:
+
+<img src="https://trilogy-care-public-hosted.s3.ap-southeast-2.amazonaws.com/other/design.png" alt="design">
+
+Run the migration and seeder to populate the database with dummy data: php artisan migrate --seed
+
+You'll need to create or modify any relevant files in order to achieve the outcome. You can determine the best approach and best way to structure the JSON for a front end to consume. Bonus points for tests. 
+
+Create a PR or a zip of the files and email anthonyr@trilogycare.com.au
+
+https://github.com/Trilogy-Care/code-challenge-01
+
+
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
