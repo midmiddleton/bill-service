@@ -1,19 +1,23 @@
-## instructions
+## Instructions
 
-The goal for this task is to create functionality utilising Larvel that returns a JSON response(s) to display data to be able to produce the following design:
+The goal for this task is to:
+- Using Laravel, create functionality that returns JSON response(s) to provide data in order to produce the following design
+- Create an endpoint that receives a JSON payload to add a new bill to the database.
 
-<img src="https://trilogy-care-public-hosted.s3.ap-southeast-2.amazonaws.com/other/design.png" alt="design">
+<img src="https://trilogy-care-public-hosted.s3.ap-southeast-2.amazonaws.com/other/design.png" alt="Page design">
 
 Run the migration and seeder to populate the database with dummy data: 
 ```
 php artisan migrate --seed
 ```
 
-In order to achieve the outcome, you'll need to create or modify relevant files in this project. You can determine the best approach structure your code and the best way to structure the JSON for the front end / view to consume. Bonus points for tests. Super Bonus points for any front end work, but it's not expected.
+- In order to copmlete this task, you will need to create or modify relevant files in this project. You can determine the best approach to structure your code, JSON and any other files in order to achieve the stated goals and demonstrate your understanding of the Laravel framework.
+- Bonus points for tests. 
+- Please note, you are note required to do any front end work, but if you wish to impress and have time, then feel free to add a very basic front end implementation. If you do the focus should be on structure rather than visuals. 
 
 ### How to submit:
 
-Create a PR or a zip of the files and email: anthonyr@trilogycare.com.au
+Create a PR or create a zip of the files and email: anthonyr@trilogycare.com.au
 
 https://github.com/Trilogy-Care/code-challenge-01
 
