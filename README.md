@@ -3,6 +3,7 @@
 The goal for this task is to:
 - Using Laravel, create functionality that returns JSON response(s) to provide data in order to produce the following design
 - Create an endpoint that receives a JSON payload to add a new bill to the database.
+- Create a command that will automatically assign all bills that currently not assigned and in stage 'submitted' to a user. A user should only have a maximum of 3 bills assigned to them.
 
 <img src="https://trilogy-care-public-hosted.s3.ap-southeast-2.amazonaws.com/other/design.png" alt="Page design">
 
