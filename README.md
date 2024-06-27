@@ -15,7 +15,7 @@ php artisan migrate --seed
 - In order to copmlete this task, you will need to create or modify relevant files in this project. You can determine the best approach to structure your code, JSON and any other files in order to achieve the stated goals and demonstrate your understanding of the Laravel framework.
 - This task should take 2 hours to complete.
 - Bonus points for tests. 
-- Please note, you are not required to do any front end work, but if you wish to impress and have time, then feel free to add a very basic front end implementation. If you do the focus should be on structure rather than visuals. 
+- Please note, you are not required to do any front end work, but if you wish to impress and have time, then feel free to add a very basic front end implementation. If you do the focus should be on structure rather than visuals. We have setup this project to use Vue3, TailwindsCSS and InertiaJS, which is our current stack. This is to save you time configuring and setting up the project. If you are familiar with this then please utilise, using ```php artisan serve``` and ```npm run dev```. Otherwise feel free to use something you ar emore familiar with is you want to do show your front end skills.
 
 ### How to submit:
 
