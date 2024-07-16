@@ -16,4 +16,9 @@ class BillStage extends Model
         'name', 'label', 'color_name', 'order',
     ];
 
+    public static function getExistingIds()
+    {
+        return array_values(BillStage::all()->pluck('id')->toArray());
+    }
+
 }
