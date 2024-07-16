@@ -29,7 +29,7 @@ class BillFactory extends Factory
             'submitted_at' => fake()->date(),
             'approved_at' => fake()->date(),
             'on_hold_at' => fake()->date(),
-            'bill_stage_id' => rand(0, 7),
+            'bill_stage_id' => rand(1, 7),  // I had to change this is if a 0 was getting set the tests would fail as there are no bill stages with id 0
         ];
     }
 }
