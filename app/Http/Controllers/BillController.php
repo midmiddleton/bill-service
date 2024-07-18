@@ -3,12 +3,35 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bill;
+use Inertia\Inertia;
 use App\Models\BillStage;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
 
 class BillController extends Controller
 {
+
+    public function index()
+    {
+        $bills = Bill::with('users')->get();
+        
+        $totalSubmitted = $bills->count();
+        $totalApproved = $bills->where('bill_stage_id', '=' , 3)->count();
+        $totalOnHold = $bills->where('bill_stage_id', '=', 5)->count();
+        $users = User::with('bills')->get();
+
+        return Inertia::render('bills', [
+            'bills' => $bills,
+            'totals' => [
+                'submitted' => $totalSubmitted,
+                'approved' => $totalApproved,
+                'on_hold' => $totalOnHold,
+            ],
+            'users'=> $users
+        ]);
+    }
+
     public function store(Request $request): JsonResponse
     {
         $bill = Bill::create($request->all());
@@ -22,7 +45,7 @@ class BillController extends Controller
      * 
      * Because the database does not allow for nullable values in the bill_stage_id column I decided to 
      * check instead for if the billstage id is not an existing bill stage.
-     * We can set the stage with a requested stage id of default it to 1
+     * We can set the stage with a requested stage id or default it to 1
      */
     public function setStageOnAllBills(Request $request): JsonResponse
     {

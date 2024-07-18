@@ -20,5 +20,4 @@ class BillStage extends Model
     {
         return array_values(BillStage::all()->pluck('id')->toArray());
     }
-
 }
