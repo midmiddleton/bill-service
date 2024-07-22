@@ -1,44 +1,43 @@
 <template>
-  <div id="app">
-    <header>
-      <h1>Bill Management System</h1>
+  <div id="app" class="font-sans text-center text-gray-700 bg-gray-100 min-h-screen">
+    <header class="bg-green-600 text-white p-4">
+      <h1 class="text-3xl font-bold">Bill Management System</h1>
     </header>
-    <main>
-      <div class="developers">
-        <div class="developer">
-          <h2>Total number of submitted bills</h2>
-          <p>{{ totals.submitted }}</p>
+    <main class="p-4">
+      <div class="flex justify-around mb-8">
+        <div class="p-4 bg-white rounded shadow w-1/3 mx-2">
+          <h2 class="text-xl font-semibold">Total number of submitted bills</h2>
+          <p class="text-lg">{{ totals.submitted }}</p>
         </div>
-        <div class="developer">
-          <h2>Total number of approved bills</h2>
-          <p>{{ totals.approved }}</p>
+        <div class="p-4 bg-white rounded shadow w-1/3 mx-2">
+          <h2 class="text-xl font-semibold">Total number of approved bills</h2>
+          <p class="text-lg">{{ totals.approved }}</p>
         </div>
-        <div class="developer">
-          <h2>Total number of on-hold bills</h2>
-          <p>{{ totals.on_hold }}</p>
+        <div class="p-4 bg-white rounded shadow w-1/3 mx-2">
+          <h2 class="text-xl font-semibold">Total number of on-hold bills</h2>
+          <p class="text-lg">{{ totals.on_hold }}</p>
         </div>
       </div>
-      <section class="main-content">
-        <h2>Users</h2>
-
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Total bills</th>
-                <th>Total submitted</th>
-                <th>total Approved</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="user in users" :key="user.id">
-                <td>{{ user.name }}</td>
-                <td>{{ user.bills.length}}</td>
-                <td>{{ countBillsWithStage(user, 2) }}</td>
-                <td>{{ countBillsWithStage(user, 3) }}</td>
-              </tr>
-            </tbody>
-          </table>
+      <section class="bg-white p-6 rounded shadow">
+        <h2 class="text-2xl font-semibold mb-4">Users</h2>
+        <table class="min-w-full bg-white rounded shadow">
+          <thead>
+            <tr>
+              <th class="py-2 px-4 border-b">Name</th>
+              <th class="py-2 px-4 border-b">Total bills</th>
+              <th class="py-2 px-4 border-b">Total submitted</th>
+              <th class="py-2 px-4 border-b">Total approved</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="user in users" :key="user.id" class="hover:bg-gray-100">
+              <td class="py-2 px-4 border-b">{{ user.name }}</td>
+              <td class="py-2 px-4 border-b">{{ user.bills.length }}</td>
+              <td class="py-2 px-4 border-b">{{ countBillsWithStage(user, 2) }}</td>
+              <td class="py-2 px-4 border-b">{{ countBillsWithStage(user, 3) }}</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
     </main>
   </div>
@@ -67,62 +66,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  color: #333;
-  background-color: #f5f5f5;
-}
-
-header {
-  background-color: #4CAF50;
-  color: white;
-  padding: 10px;
-}
-
-.developers {
-  display: flex;
-  justify-content: space-around;
-  margin: 20px 0;
-}
-
-.developer {
-  border: 1px solid #ddd;
-  padding: 20px;
-  width: 30%;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.main-content {
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 18px;
-  text-align: left;
-}
-th,
-td {
-  padding: 12px;
-  border-bottom: 1px solid #ddd;
-}
-thead tr {
-  background-color: #f2f2f2;
-}
-tbody tr:hover {
-  background-color: #f9f9f9;
-}
-th {
-  background-color: #4CAF50;
-  color: white;
-}
-</style>
